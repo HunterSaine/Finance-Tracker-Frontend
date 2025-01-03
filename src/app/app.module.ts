@@ -9,6 +9,9 @@ import {HomeComponent} from './pages/home/home.component';
 import {AssetsComponent} from './pages/assets/assets.component';
 import {LiabilitiesComponent} from './pages/liabilities/liabilities.component';
 import {LoginComponent} from './pages/login/login.component';
+import {HttpClientModule} from '@angular/common/http';
+import {ApiService} from './services/api.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,10 +21,13 @@ import {LoginComponent} from './pages/login/login.component';
     AssetsComponent,
     LiabilitiesComponent,
     LoginComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(withEventReplay()),

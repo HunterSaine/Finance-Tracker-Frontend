@@ -1,1 +1,14 @@
 <p>assets works!</p>
+
+<button (click)="getAssets()">Get Accounts</button>
+<ul>
+  <li *ngFor="let asset of assets">
+    {{ asset.name }} - ${{ asset.value | number:'1.2-2' }}
+  </li>
+</ul>
+
+<form>
+  <input type="text" [(ngModel)]="newAsset.name" name="name" placeholder="Name">
+  <input type="number" [(ngModel)]="newAsset.value" name="value" placeholder="Value">
+  <button (click)="addAsset()">Add Asset</button>
+</form>
